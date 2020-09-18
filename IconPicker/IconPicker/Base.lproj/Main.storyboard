@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,107 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IconPicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RYu-bQ-yIB">
+                                <rect key="frame" x="20" y="190" width="374" height="346"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RYu-bQ-yIB" secondAttribute="height" multiplier="187:173" id="em6-F9-gfd"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTu-et-0or">
+                                <rect key="frame" x="20" y="574" width="374" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="PQh-nz-HOB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icon Picker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fi6-Cs-fi8">
+                                <rect key="frame" x="127.5" y="125" width="159" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RYu-bQ-yIB" firstAttribute="top" secondItem="Fi6-Cs-fi8" secondAttribute="bottom" constant="24" id="Fv1-0B-Vu4"/>
+                            <constraint firstItem="RYu-bQ-yIB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.903382" id="SZJ-ce-4eh"/>
+                            <constraint firstItem="eTu-et-0or" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XJX-5M-Xf4"/>
+                            <constraint firstItem="eTu-et-0or" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.903382" id="a7g-WO-V78"/>
+                            <constraint firstItem="Fi6-Cs-fi8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="81" id="c6C-7F-0Tc"/>
+                            <constraint firstItem="eTu-et-0or" firstAttribute="top" secondItem="RYu-bQ-yIB" secondAttribute="bottom" constant="38" id="fOC-tK-uZq"/>
+                            <constraint firstItem="RYu-bQ-yIB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qVB-ri-MyS"/>
+                            <constraint firstItem="Fi6-Cs-fi8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="t7D-LO-AqJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TSw-w7-hgb">
+            <objects>
+                <viewController id="MBh-gs-7r2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6It-Wb-bTC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="Huu-YK-8ms">
+                                <rect key="frame" x="41.5" y="126" width="331" height="654"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rn4-AE-K8Q">
+                                        <rect key="frame" x="16.5" y="0.0" width="298" height="188.5"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="lasso" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="regular"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTa-kn-lkT">
+                                        <rect key="frame" x="16.5" y="232.5" width="298" height="189"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="trash.slash.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="regular"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6c-xd-g2H">
+                                        <rect key="frame" x="16.5" y="465.5" width="298" height="188.5"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="calendar.badge.plus" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="regular"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rn4-AE-K8Q" firstAttribute="width" secondItem="Huu-YK-8ms" secondAttribute="width" multiplier="0.9" id="1tm-Jf-ee2"/>
+                                    <constraint firstItem="H6c-xd-g2H" firstAttribute="width" secondItem="Huu-YK-8ms" secondAttribute="width" multiplier="0.9" id="MqB-VU-uXL"/>
+                                    <constraint firstItem="RTa-kn-lkT" firstAttribute="width" secondItem="Huu-YK-8ms" secondAttribute="width" multiplier="0.9" id="aJ6-Gn-o5z"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Huu-YK-8ms" firstAttribute="width" secondItem="oPa-8t-YoF" secondAttribute="width" multiplier="0.8" id="N2j-eE-CVY"/>
+                            <constraint firstItem="Huu-YK-8ms" firstAttribute="height" secondItem="oPa-8t-YoF" secondAttribute="height" multiplier="0.8" id="gkK-Ab-4Ld"/>
+                            <constraint firstItem="Huu-YK-8ms" firstAttribute="centerX" secondItem="oPa-8t-YoF" secondAttribute="centerX" id="qeh-G5-nTx"/>
+                            <constraint firstItem="Huu-YK-8ms" firstAttribute="centerY" secondItem="oPa-8t-YoF" secondAttribute="centerY" id="sxx-xV-gCP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oPa-8t-YoF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ynO-rc-cJA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885.50724637681162" y="126.5625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="calendar.badge.plus" catalog="system" width="128" height="101"/>
+        <image name="lasso" catalog="system" width="128" height="118"/>
+        <image name="trash.slash.fill" catalog="system" width="121" height="128"/>
+    </resources>
 </document>
