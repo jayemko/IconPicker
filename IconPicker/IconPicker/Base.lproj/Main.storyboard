@@ -26,7 +26,11 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="PQh-nz-HOB"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Pick An Icon"/>
+                                <connections>
+                                    <segue destination="MBh-gs-7r2" kind="show" identifier="iconPickerSegue" id="1D8-1U-oyO"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icon Picker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fi6-Cs-fi8">
                                 <rect key="frame" x="127.5" y="125" width="159" height="41"/>
@@ -48,42 +52,54 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="iconImageView" destination="RYu-bQ-yIB" id="DKB-s0-9lI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
-        <!--View Controller-->
+        <!--Icon Picker View Controller-->
         <scene sceneID="TSw-w7-hgb">
             <objects>
-                <viewController id="MBh-gs-7r2" sceneMemberID="viewController">
+                <viewController id="MBh-gs-7r2" customClass="IconPickerViewController" customModule="IconPicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6It-Wb-bTC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="Huu-YK-8ms">
-                                <rect key="frame" x="41.5" y="126" width="331" height="654"/>
+                                <rect key="frame" x="41.5" y="81" width="331" height="646"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rn4-AE-K8Q">
-                                        <rect key="frame" x="16.5" y="0.0" width="298" height="188.5"/>
+                                        <rect key="frame" x="16.5" y="0.0" width="298" height="186"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="lasso" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="regular"/>
                                         </state>
+                                        <connections>
+                                            <action selector="lassoButtonTapped:" destination="MBh-gs-7r2" eventType="touchUpInside" id="vqq-cO-jJ2"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTa-kn-lkT">
-                                        <rect key="frame" x="16.5" y="232.5" width="298" height="189"/>
+                                        <rect key="frame" x="16.5" y="230" width="298" height="186"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="trash.slash.fill" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="regular"/>
                                         </state>
+                                        <connections>
+                                            <action selector="trashButtonTapped:" destination="MBh-gs-7r2" eventType="touchUpInside" id="8gb-RD-LMS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6c-xd-g2H">
-                                        <rect key="frame" x="16.5" y="465.5" width="298" height="188.5"/>
+                                        <rect key="frame" x="16.5" y="460" width="298" height="186"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="calendar.badge.plus" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="regular"/>
                                         </state>
+                                        <connections>
+                                            <action selector="calendarButtonTapped:" destination="MBh-gs-7r2" eventType="touchUpInside" id="xhQ-fH-PAs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -102,6 +118,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oPa-8t-YoF"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ake-O6-V8g"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ynO-rc-cJA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

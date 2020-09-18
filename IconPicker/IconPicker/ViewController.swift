@@ -10,11 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var iconImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //iconPickerSegue
+        if let destinationVC = segue.destination as? IconPickerViewController {
+            destinationVC.delegate = self
+        }
+    }
 }
 
+extension ViewController: IconPickerViewControllerDelegate {
+    func iconPickerButtonTapped(image: UIImage?) {
+        iconImageView.image = image
+    }
+}
